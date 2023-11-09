@@ -50,6 +50,9 @@ jobs:
         id: version
         uses: codacy/git-version@2.7.1
 
+      - name: Version
+        run: echo ${{ steps.version.outputs.version }}
+
       - name: Build with Maven
         run: mvn clean install -Dcd-version=${{ steps.version.outputs.version }}
 
