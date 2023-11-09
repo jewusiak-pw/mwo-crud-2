@@ -21,8 +21,8 @@ name: Build and deploy JAR app to Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: mwo-crud    # set this to the name of your Azure Web App
-  JAVA_VERSION: '17'                  # set this to the Java version to use
-  DISTRIBUTION: Temurin                  # set this to the Java distribution
+  JAVA_VERSION: '17.0.9+9'                  # set this to the Java version to use
+  DISTRIBUTION: temurin                  # set this to the Java distribution
 
 on:
   push:
