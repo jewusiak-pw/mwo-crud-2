@@ -46,8 +46,12 @@ jobs:
           distribution: ${{ env.DISTRIBUTION }}
           cache: 'maven'
 
+      - name: App Version
+        id: version
+        uses: codacy/git-version@2.7.1
+
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install -Dcd-version=${{ steps.version.outputs.version }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
