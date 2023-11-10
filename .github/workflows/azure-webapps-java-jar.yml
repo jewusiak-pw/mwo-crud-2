@@ -32,10 +32,6 @@ jobs:
         DRY_RUN: true
         DEFAULT_BUMP: patch
 
-    - name: Tagging
-      run: |
-        echo "The next tag version will be: ${{ steps.taggerDryRun.outputs.tag }} -> ${{ steps.taggerDryRun.outputs.new_tag }}"
-
   build:
     runs-on: ubuntu-latest
     permissions:
