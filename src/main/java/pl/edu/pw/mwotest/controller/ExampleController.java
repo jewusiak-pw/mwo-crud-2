@@ -15,6 +15,6 @@ public class ExampleController {
 
     @GetMapping
     public ResponseEntity<String> getHelloWorld(@RequestParam(required = false, defaultValue = "") String name) {
-        return ResponseEntity.ok("Hello here " + (name.isBlank() ? "World" : name) + "! This is version " + version + " of the app.");
+        return ResponseEntity.ok("Hello " + (name.isBlank() ? "World" : name) + "! This is version " + version + " of the app.");
     }
 }
